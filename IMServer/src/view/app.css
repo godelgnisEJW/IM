@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.custom-jfx-radio-button-blue {
+    -fx-text-fill: #5264AE;
+    -jfx-selected-color: #5264AE;
+    -jfx-unselected-color: #212121;
+}
+
+.custom-jfx-radio-button-red {
+    -fx-text-fill: #f44336;
+    -jfx-selected-color: #f44336;
+    -jfx-unselected-color: #b71c1c;
+}
+
+.custom-jfx-radio-button-green {
+    -fx-text-fill: #4caf50;
+    -jfx-selected-color: #4caf50;
+    -jfx-unselected-color: #1b5e20;
+}

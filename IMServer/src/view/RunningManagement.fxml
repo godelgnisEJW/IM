@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #0ec9cc;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RunningManagementController">
+   <children>
+      <Label layoutX="130.0" layoutY="14.0" text="服务器配置" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="572.0" layoutY="14.0" text="服务器日志" textFill="WHITE" AnchorPane.leftAnchor="572.0" AnchorPane.rightAnchor="208.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="serverLog" editable="false" layoutX="378.0" layoutY="48.0" prefHeight="540.0" prefWidth="508.0" wrapText="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="48.0" />
+      <GridPane layoutX="14.0" layoutY="48.0" prefHeight="431.0" prefWidth="351.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="136.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="215.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="状态" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="服务器IP" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="监听端口" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="通信协议" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="当前在线人数" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="最大在线人数" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="status" text="关闭" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="sercerIP" text="127.0.0.1" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <JFXRadioButton fx:id="tcpProtocol" selected="true" style="-fx-text-fill: #4caf50; -jfx-selected-color: #4caf50; -jfx-unselected-color: #1b5e20;" text="TCP协议" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="udpProtocol" style="-fx-text-fill: #5264AE; -jfx-selected-color: #5264AE; -jfx-unselected-color: #212121;" text="UDP协议" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </VBox>
+            <JFXSlider fx:id="maxOnlineNum" max="50.0" min="2.0" showTickMarks="true" value="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="onlineNum" text="0人" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="serverPort" text="1088" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <JFXButton fx:id="startButton" buttonType="RAISED" layoutX="42.0" layoutY="525.0" onAction="#start" ripplerFill="WHITE" style="-fx-background-color: #5264AE; -fx-text-fill: WHITE; -fx-font-size: 18px;" text="启动服务器" />
+      <JFXButton fx:id="closeButton" buttonType="RAISED" disable="true" layoutX="226.0" layoutY="525.0" onAction="#close" ripplerFill="WHITE" style="-fx-background-color: #5264AE; -fx-text-fill: WHITE; -fx-font-size: 18px;" text="关闭服务器" />
+      <JFXToolbar layoutX="131.0" layoutY="483.0" prefHeight="36.0" prefWidth="156.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RootLayoutController">
+   <tabs>
+      <Tab fx:id="rmTab" closable="false" text="运行管理" />
+      <Tab fx:id="omTab" closable="false" text="在线管理" />
+      <Tab fx:id="dmTab" closable="false" text="后台数据管理" />
+   </tabs>
+</JFXTabPane>

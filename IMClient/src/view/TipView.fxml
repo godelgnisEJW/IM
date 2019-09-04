@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="tipPane" prefHeight="300.0" prefWidth="400.0" style="-fx-border-color: black;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="261.0" layoutY="211.0" onAction="#confirm" prefHeight="29.0" prefWidth="70.0" ripplerFill="WHITE" style="-fx-background-color: #5264AE; -fx-text-fill: WHITE; -fx-font-size: 14px;" text="确定" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="74.0" />
+      <JFXButton buttonType="RAISED" layoutX="74.0" layoutY="211.0" onAction="#cancle" prefHeight="29.0" prefWidth="70.0" ripplerFill="WHITE" style="-fx-background-color: #5264AE; -fx-text-fill: WHITE; -fx-font-size: 14px;" text="取消" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="74.0" />
+      <Label fx:id="tipLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="191.0" prefWidth="381.0" text="这里是tip消息" wrapText="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #0ec9cc;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.OnlineManagementController">
+   <children>
+      <Label layoutX="114.0" layoutY="7.0" text="在线列表" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="onlineUserList" layoutX="21.0" layoutY="46.0" prefHeight="507.0" prefWidth="297.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="46.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="7.0" text="公告日志" textFill="WHITE" AnchorPane.leftAnchor="568.0" AnchorPane.rightAnchor="236.0" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="noticeLog" editable="false" layoutX="363.0" layoutY="46.0" prefHeight="352.0" prefWidth="505.0" wrapText="true" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="363.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="46.0" />
+      <TextArea fx:id="notice" layoutX="363.0" layoutY="409.0" prefHeight="114.0" prefWidth="505.0" wrapText="true" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="363.0" AnchorPane.rightAnchor="32.0" />
+      <JFXButton buttonType="RAISED" layoutX="776.0" layoutY="538.0" onAction="#sentNotice" ripplerFill="WHITE" style="-fx-background-color: #5264AE; -fx-text-fill: WHITE; -fx-font-size: 14px;" text="发送公告" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="44.0" />
+      <Label contentDisplay="CENTER" prefHeight="24.0" prefWidth="900.0" text="状态" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
